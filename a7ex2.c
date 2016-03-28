@@ -17,9 +17,7 @@ do {
 
 int a_to_i(char* str){
 
-len = strlen(text);
-p = len;
-for(i = 0; i < len; i++){
+while(text[i] != 0){
   temp = text[i];
   if(temp == 48){
      currChar = 0;
@@ -53,6 +51,7 @@ for(i = 0; i < len; i++){
   }
   num = num * 10;
   number = number + currChar;
+  i++;
 }
   return number;
 }
