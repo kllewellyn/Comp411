@@ -2,34 +2,25 @@
 #include <string.h>
 main(){
 
-char text;
-int i, temp, result, factorial;
+char text[22];
+int i, temp, result, factorial = 0;
 int num = 0;
-
-do {
-  fgets(text, 20, stdin);
+do{
+  fgets(text, 21, stdin);
   result = a_to_i(text);
   printf("%d\n", result);
-  factorial = factorial(result);
-  printf("%d\n", factorial);
-} while(result != 0);
+}
+while(result != 0);
 }
 
 int a_to_i(char* str){
-
-while(text[i] != 0){
-  temp = text[i];
+int temp, num, i = 0;
+while(str[i] != 10){
+  temp = str[i];
   temp = temp - 48;
   num = num * 10;
-  number = number + temp;
+  num = num + temp;
   i++;
 }
-  return number;
-}
-
-int factorial(int n){
-  if ( n == 0){
-    return 1;
-  }
-  return n * factorial(n-1);
+  return num;
 }
